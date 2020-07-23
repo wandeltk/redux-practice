@@ -9,4 +9,4 @@ User stories
  give yourself roughly 1 hr - 1 hr 15 min
  NO RESOURCES
  check dependencies
- You dont need to add folders
+
