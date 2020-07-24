@@ -1,15 +1,20 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
-const ErrorMessage = (props) => {
+const ErrorMessageComponent = (props) => {
 
     return (
         <>
-            <div id="to-do-list">
-                {/*this is where the error message will go!*/}
+            <div id="to-do-list" >
+                {props.errorMessage}
             </div>
         </>
     )
 
 }
 
-export default ErrorMessage;
+const mapStateToProps = (state) => ({
+    errorMessage: state.addItemReducer.errorMessage
+});
+
+export const ErrorMessage = connect(mapStateToProps)(ErrorMessageComponent);
